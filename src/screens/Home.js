@@ -1,7 +1,7 @@
 import React from 'react'
 import { FlatList, Text, View } from 'react-native'
 
-export default class FadeOutCard extends React.Component {
+export default class Home extends React.Component {
 
   renderItem = ({ item }) => {
     return (
@@ -21,10 +21,10 @@ export default class FadeOutCard extends React.Component {
   render() {
 
     const screens = [
-      { key: 'day1' },
-      { key: 'day2' },
-      { key: 'day3' },
-      { key: 'day4' },
+      { key: 'Day1' },
+      { key: 'Day2' },
+      { key: 'Day3' },
+      { key: 'Day4' },
     ]
 
     return <FlatList
