@@ -1,8 +1,16 @@
 import { createStackNavigator } from 'react-navigation'
-import FadeOutCard from '../screens/FadeOutCard'
+import * as screens from '../screens'
 
 export default createStackNavigator({
-  fadeOutCard: {
-    screen: FadeOutCard,
+  home: {
+    screen: screens.Home,
   },
+  fadeOutCard: {
+    screen: screens.FadeOutCard,
+  },
+  springButton: {
+    screen: screens.SpringButton,
+  },
+}, {
+  initialRouteName: 'home',
 })
