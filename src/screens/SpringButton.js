@@ -7,21 +7,34 @@ export default class FadeOutCard extends React.Component {
     this.animatedValue = new Animated.Value(1)
   }
 
-  onPress = () => {
-    Animated.timing(this.animatedValue, {
-      toValue: 0,
-      duration: 500,
+  handlePressIn = () => {
+    Animated.spring(this.animatedValue, {
+      toValue: .5,
+    }).start()
+  }
+
+  handlePressOut = () => {
+    Animated.spring(this.animatedValue, {
+      toValue: 1,
+      friction: 3,
+      tension: 40,
     }).start()
   }
 
   render() {
-    const animatedStyle = { opacity: this.animatedValue }
+
+    const animatedStyle = {
+      transform: [ { scale: this.animatedValue } ],
+    }
 
     return (
       <View style={styles.container}>
-        <TouchableWithoutFeedback onPress={this.onPress}>
-          <Animated.View style={[ styles.card, animatedStyle ]}>
-            <Text style={styles.text}>Click Here !</Text>
+        <TouchableWithoutFeedback
+          onPressIn={this.handlePressIn}
+          onPressOut={this.handlePressOut}
+        >
+          <Animated.View style={[ styles.button, animatedStyle ]}>
+            <Text style={styles.text}>Press Here !</Text>
           </Animated.View>
         </TouchableWithoutFeedback>
       </View>
@@ -36,13 +49,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  card: {
-    width: 300,
-    height: 200,
-    borderRadius: 15,
-    backgroundColor: '#696969',
-    alignItems: 'center',
-    justifyContent: 'center',
+  button: {
+    backgroundColor: "#333",
+    borderRadius: 5,
+    width: 100,
+    height: 50,
+    alignItems: "center",
+    justifyContent: "center",
   },
   text: {
     color: '#fff',
