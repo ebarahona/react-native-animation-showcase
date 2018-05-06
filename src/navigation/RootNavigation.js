@@ -5,11 +5,14 @@ export default createStackNavigator({
   home: {
     screen: screens.Home,
   },
-  fadeOutCard: {
-    screen: screens.FadeOutCard,
+  day1: {
+    screen: screens.Day1,
   },
-  springButton: {
-    screen: screens.SpringButton,
+  day2: {
+    screen: screens.Day2,
+  },
+  day3: {
+    screen: screens.Day3,
   },
 }, {
   initialRouteName: 'home',

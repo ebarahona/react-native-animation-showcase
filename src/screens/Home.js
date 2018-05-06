@@ -21,8 +21,9 @@ export default class FadeOutCard extends React.Component {
   render() {
 
     const screens = [
-      { key: 'fadeOutCard' },
-      { key: 'springButton' },
+      { key: 'day1' },
+      { key: 'day2' },
+      { key: 'day3' },
     ]
 
     return <FlatList

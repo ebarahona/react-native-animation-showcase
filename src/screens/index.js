@@ -1,9 +1,11 @@
 import Home from './Home'
-import FadeOutCard from './FadeOutCard'
-import SpringButton from './SpringButton'
+import Day1 from './Day1'
+import Day2 from './Day2'
+import Day3 from './Day3'
 
 export {
   Home,
-  FadeOutCard,
-  SpringButton
+  Day1,
+  Day2,
+  Day3,
 }

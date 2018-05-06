@@ -1,7 +1,7 @@
 import React from 'react'
 import { Animated, View, StyleSheet, TouchableWithoutFeedback, Text } from 'react-native'
 
-export default class FadeOutCard extends React.Component {
+export default class Day1 extends React.Component {
 
   componentWillMount() {
     this.animatedValue = new Animated.Value(1)
