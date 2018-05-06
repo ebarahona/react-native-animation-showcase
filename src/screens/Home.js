@@ -24,6 +24,7 @@ export default class FadeOutCard extends React.Component {
       { key: 'day1' },
       { key: 'day2' },
       { key: 'day3' },
+      { key: 'day4' },
     ]
 
     return <FlatList

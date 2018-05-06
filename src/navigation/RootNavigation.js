@@ -14,6 +14,9 @@ export default createStackNavigator({
   day3: {
     screen: screens.Day3,
   },
+  day4: {
+    screen: screens.Day4,
+  },
 }, {
-  initialRouteName: 'home',
+  initialRouteName: 'day4',
 })
