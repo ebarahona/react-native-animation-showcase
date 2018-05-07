@@ -20,24 +20,24 @@ export default class Day5 extends React.Component {
   handlePress = () => {
     Animated.parallel([
       Animated.spring(this.animatedValue1, {
-        toValue: this.getRandom(20, 60),
+        toValue: this.getRandom(40, 120),
         friction: 1,
-        tension: 200,
+        tension: 300,
       }),
       Animated.spring(this.animatedValue2, {
-        toValue: this.getRandom(20, 60),
+        toValue: this.getRandom(40, 120),
         friction: 1,
-        tension: 200,
+        tension: 300,
       }),
       Animated.spring(this.animatedValue3, {
-        toValue: this.getRandom(20, 60),
+        toValue: this.getRandom(40, 120),
         friction: 1,
-        tension: 200,
+        tension: 300,
       }),
       Animated.spring(this.animatedValue4, {
-        toValue: this.getRandom(20, 60),
+        toValue: this.getRandom(40, 120),
         friction: 1,
-        tension: 200,
+        tension: 300,
       }),
     ]).start()
   }
@@ -54,7 +54,7 @@ export default class Day5 extends React.Component {
     return (
       <View style={styles.container}>
         <TouchableWithoutFeedback onPress={this.handlePress} onPressIn={this.handlePressIn}>
-          <Animated.View style={[ styles.box, animatedStyle ]}/>
+          <Animated.View style={[ animatedStyle, styles.box ]}/>
         </TouchableWithoutFeedback>
       </View>
     )
@@ -69,9 +69,8 @@ const styles = StyleSheet.create({
   },
   box: {
     backgroundColor: '#ff8f93',
-    width: 60,
-    height: 60,
-    borderRadius: 2,
+    width: 120,
+    height: 120,
     justifyContent: 'center',
     alignItems: 'center',
   },
