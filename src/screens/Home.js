@@ -25,6 +25,7 @@ export default class Home extends React.Component {
       { key: 'Day2' },
       { key: 'Day3' },
       { key: 'Day4' },
+      { key: 'Day5' },
     ]
 
     return <FlatList

@@ -7,6 +7,6 @@ export default createStackNavigator(
     [ c.displayName ]: c,
   }), {}),
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'Day5',
   },
 )
