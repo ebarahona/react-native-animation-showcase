@@ -3,11 +3,10 @@ import { Animated, View, StyleSheet, TouchableWithoutFeedback } from 'react-nati
 
 export default class Day5 extends React.Component {
   componentWillMount() {
-    this.animatedValue1 = new Animated.Value(0)
-    this.animatedValue2 = new Animated.Value(0)
-    this.animatedValue3 = new Animated.Value(0)
-    this.animatedValue4 = new Animated.Value(0)
-    this.animatedValue5 = new Animated.Value(1)
+    this.animatedValue1 = new Animated.Value(60)
+    this.animatedValue2 = new Animated.Value(60)
+    this.animatedValue3 = new Animated.Value(60)
+    this.animatedValue4 = new Animated.Value(60)
   }
 
   getRandom = (max, min) => {
